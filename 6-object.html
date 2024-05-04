@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> ARRAY</title>
+</head>
+
+<script>
+    var pengguna = {
+        nama: "Echa moo",
+        umur: 19,
+        pekerjaan: "UI Designer",
+        alamat: {
+            jalan:"JL. Lijen No.43",
+            kota: "Banyuwangi",
+            kodePos: "68454"
+        },
+        hobi: ["Design UI","Main Game","Dance"]
+    };
+
+    console.log("Nama pengguna:", pengguna.nama);
+    console.log("Umur pengguna:", pengguna.umur);
+    console.log("Kota pengguna:", pengguna.alamat.kota);
+
+    pengguna.umur = 20;
+    console.log("Setelah mengubah umur:", pengguna.umur);
+
+    pengguna.email = "echaazwa@gmail.com";
+    console.log("Setelah menambah email:", pengguna);
+
+    delete pengguna.hobi;
+    console.log("Setelah menghapus hobi:", pengguna);
+    
+</script>
+</html>
