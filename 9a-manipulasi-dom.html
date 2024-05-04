@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> JS Selector - Mencari mengambil data pada tag HTML</title>
+</head>
+ <body>
+    <h2> Javascript Selector</h2>
+    <p id="judul" class="title"> ini judulnya yang lama yaaa</p>
+    <p id="paragraf" class="paragraph"></p>
+ </body>
+<script>
+
+    // ini pake id
+    var judul = document.getElementById("judul")
+    judul.innerHTML = "Ini judulnya yang baru okey"
+   
+//    pake class
+    var paragraf = document.getElementsById("paragraph")
+    paragraf.innerHTML = "Ini adalah paragraf"
+
+</script>
+</html>
