@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> JS Selector - Mencari mengambil data pada tag HTML</title>
+</head>
+ <body>
+    <button id="myButton" onclick="ubahWarna()">Click Me</button>
+    <p id="paragraf" class="paragraph"></p>
+
+    <h2 id="touch-me" onmouseover="ubahWarnaKuning()" onmouseleave="ubahWarnaDefault()">
+    Cobain Nih Hovernya !</h2>
+ </body>
+<script>
+    var paragraf = document.getElementById("paragraf")
+    paragraf.innerHTML = "ini adalah paragraf!"
+
+    function ubahWarna(){
+        var button = document.getElementById("myButton");
+        button.style.background = "green"
+        paragraf.style.color = "pink"
+    }
+
+    function ubahWarnaKuning(){
+        var text = document.getElementById("touch-me");
+        text.style.color ="Blue"
+    }
+
+    function ubahWarnaDefault(){
+        var text = document.getElementById("touch-me");
+        text.style.color = "black"
+    }
+
+</script>
+</html>
