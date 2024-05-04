@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> ARRAY</title>
+</head>
+
+<script>
+   function tambah (angka1, angka2){
+    return angka1 + angka2;
+   }
+
+   function kurang (angka1, angka2){
+    return angka1 - angka2;
+   }
+
+   function kali (angka1, angka2){
+    return angka1 * angka2;
+   }
+
+   function bagi (angka1, angka2){
+    if ( angka2 === 0){
+        return "Tidak dapat dibagi oleh nol";
+
+    }
+    return angka1 / angka2;
+   }
+
+   var hasilTambah = tambah(5,4);
+   console.log("Hasil penambahan:", hasilTambah);
+
+   var hasilKurang = kurang(10,3);
+   console.log("Hasil pengurangan:", hasilKurang);
+
+   var hasilKali = kali(2,4);
+   console.log("Hasil kali:", hasilKali);
+
+   var hasilBagi = bagi(8,2);
+   console.log("Hasil pembagian:", hasilBagi);
+   
+   var hasilBagiNol = bagi(4,0);
+   console.log("Hasil pembagian nol:", hasilBagiNol);
+
+</script>
+</html>
