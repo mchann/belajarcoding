@@ -1,44 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> ARRAY</title>
+    <title> JS Selector - Mencari mengambil data pada tag HTML</title>
 </head>
-
+ <body>
+    <h2> Javascript Selector</h2>
+    <p id="judul" class="title"> ini judulnya yaa</p>
+    <p id="paragraf" class="paragraph"> ini tuh paragraf nya</p>
+ </body>
 <script>
-   function tambah (angka1, angka2){
-    return angka1 + angka2;
-   }
 
-   function kurang (angka1, angka2){
-    return angka1 - angka2;
-   }
+    // ini pake id
+    var judul = document.getElementById("judul").innerHTML
+    var paragraf = document.getElementById("paragraf").innerHTML
+   console.log("Judul:" + judul);
+   console.log("Paragraph:" + paragraf);
 
-   function kali (angka1, angka2){
-    return angka1 * angka2;
-   }
-
-   function bagi (angka1, angka2){
-    if ( angka2 === 0){
-        return "Tidak dapat dibagi oleh nol";
-
-    }
-    return angka1 / angka2;
-   }
-
-   var hasilTambah = tambah(5,4);
-   console.log("Hasil penambahan:", hasilTambah);
-
-   var hasilKurang = kurang(10,3);
-   console.log("Hasil pengurangan:", hasilKurang);
-
-   var hasilKali = kali(2,4);
-   console.log("Hasil kali:", hasilKali);
-
-   var hasilBagi = bagi(8,2);
-   console.log("Hasil pembagian:", hasilBagi);
-   
-   var hasilBagiNol = bagi(4,0);
-   console.log("Hasil pembagian nol:", hasilBagiNol);
+//    pake class
+    var judul = document.getElementsByClassName("title")[0].innerHTML
+    var paragraf = document.getElementsByClassName("paragraph")[0].innerHTML
+    console.log("judul:" + judul);
+    console.log("Paragraph:" + paragraf);
 
 </script>
 </html>
