@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jquery Selector - Mencari mengambil data pada Tag HTML</title>
+    
+</head>
+
+<body>
+    <button id="btn-1">Klik Akuu</button>
+    <p id="text-only"></p>
+    <p id="text-html"></p>
+
+    <p>----------------------</p>
+    <button id="btn-2">Isi nama</button>
+    <p>Input field: <input type="text" id="nama"></p>
+    <p>----------------------</p>
+
+    <h2 id="touch-me">Sentuh Akuu</h2>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+
+    $(document).ready(function (){
+        $("#text-only").text("ini adalah paragraf");
+        $("#text-html").hmtl("<b>Text dengan tag html </b>");
+
+        $("#btn-2").click(function () {
+            $("#nama").val("Budi Siregar");
+        });
+
+        $("#btn-1").click(function(){
+            $(this).css("backgroudColor", "green");
+            $("#text-only").css("color", "red");
+        });
+
+        $("#touch-me").mouseenter(function(){
+            $(this).css("color","blue");
+        });
+
+        $("#touch-me").mouseleave(function(){
+            $(this).css("color", "black");
+        });
+    });
+    </script>
+
+</html>
