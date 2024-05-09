@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jquery Selector - Mencari mengambil data pada Tag HTML</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Jquery Selector !</h2>
+    <p id="judul" class="title">Ini adalah judul</p>
+    <p id="paragraf" class="paragraf"> ini adalah paragraf</p>
+</body>
+
+<script>
+    var judul = $('#judul').text();
+    var paragraf =$('#paragraf').text();
+    console.log("judul: " + judul);
+    console.log("paragraf: " + paragraf);
+
+    var judul = $(".title").text();
+    var paragraf = $(".paragraf").text();
+    console.log("Judul: " + judul);
+    console.log("Paragraf: " + paragraf);
+</script>
+
+</html>
