@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>slide pake jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myDiv {
+            position: relative;
+            left: 0px;
+            opacity: 1;
+            height: 100px;
+            width: 100px;
+            background-color: #fbb8e9;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <p>Aku bergeerak mweheherheh</p>
+    </div>
+    <button id="slideButton">Slide</button>
+
+   <script>
+        $(document).ready(function() {
+            $('#slideButton').click(function() {
+                $('#myDiv').animate({
+                    left: '250px'
+                }, 2000, function() {
+                    $('#myDiv').animate({
+                        left: '0px'
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- refernsi nya dari W3 -->

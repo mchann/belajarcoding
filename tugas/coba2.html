@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Umur</title>
+</head>
+<body>
+  <h1>Kalkulator Umur</h1>
+  <form>
+    <label for="tahunLahir">Masukkan Tahun Lahir:</label><br>
+    <input type="number" id="tahunLahir" name="tahunLahir"><br>
+    <button type="button" onclick="hitungUmur()">Hitung Umur</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    function hitungUmur() {
+      var tahunLahir = document.getElementById('tahunLahir').value;
+
+    
+      if (isNaN(tahunLahir) || tahunLahir < 0) {
+        document.getElementById('result').innerHTML = "Tahun lahir tidak valid";
+        return;
+      }
+
+      var tahunSekarang = parseInt(new Date().getFullYear());
+
+      var umur = tahunSekarang - tahunLahir;
+
+      switch (umur) {
+        case umur < 1:
+          document.getElementById('result').innerHTML = "Anda masih bayi";
+          break;
+        case umur >= 1 && umur <= 5:
+          document.getElementById('result').innerHTML = "Anda masih balita";
+          break;
+        case umur >= 6 && umur <= 12:
+          document.getElementById('result').innerHTML = "Anda masih anak-anak";
+          break;
+        case umur >= 13 && umur <= 18:
+          document.getElementById('result').innerHTML = "Anda masih remaja";
+          break;
+        case umur >= 19 && umur <= 30:
+          document.getElementById('result').innerHTML = "Anda sudah dewasa";
+          break;
+        case umur >= 31 && umur <= 50:
+          document.getElementById('result').innerHTML = "Anda sudah dewasa tua";
+          break;
+        case umur >= 51:
+          document.getElementById('result').innerHTML = "Anda sudah tua";
+          break;
+        default:
+          document.getElementById('result').innerHTML = "Tahun lahir tidak valid";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

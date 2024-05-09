@@ -1,3 +1,5 @@
+
+
 function hitungUmur() {
   var tahunLahir = parseInt(document.getElementById('tahunLahir').value);
   var tahunSekarang = parseInt(new Date().getFullYear());

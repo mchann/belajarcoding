@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> jQuery untuk Menghapus Elemen</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="myDiv">
+        <p>Ini adalah paragraf.</p>
+        <button id="removeButton">Hapus</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#removeButton').click(function() {
+                $('#myDiv').remove();
+            });
+        });
+    </script>
+</body>
+</html>
